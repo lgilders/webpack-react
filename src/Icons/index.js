@@ -1,0 +1,7 @@
+export { default as Facebook } from './Facebook'
+export { default as Instagram } from './Instagram'
+export { default as Linkedin } from './Linkedin'
+export { default as Tiktok } from './Tiktok'
+export { default as Twitter } from './Twitter'
+export { default as Vimeo } from './Vimeo'
+export { default as Youtube } from './Youtube'
