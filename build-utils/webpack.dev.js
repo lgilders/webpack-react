@@ -36,7 +36,22 @@ module.exports = {
               plugins: [require.resolve("react-refresh/babel")],
             },
           },
+          {
+            loader: '@mdx-js/loader',
+            /** @type {import('@mdx-js/loader').Options} */
+            options: {},
+          },
         ],
+      },
+      {
+        test: /\.mdx?$/,
+        use: [
+          {
+            loader: '@mdx-js/loader',
+            /** @type {import('@mdx-js/loader').Options} */
+            options: {}
+          }
+        ]
       },
       {
         test: /\.svg$/,
