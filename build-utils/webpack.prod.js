@@ -27,7 +27,24 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: [
+          {
+            loader: require.resolve("babel-loader"),
+            options: {
+              plugins: [require.resolve("react-refresh/babel"), '@babel/plugin-transform-react-jsx'],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.mdx?$/,
+        use: [
+          {
+            loader: '@mdx-js/loader',
+            /** @type {import('@mdx-js/loader').Options} */
+            options: {}
+          }
+        ]
       },
       {
         test: /\.svg$/,

@@ -33,13 +33,8 @@ module.exports = {
           {
             loader: require.resolve("babel-loader"),
             options: {
-              plugins: [require.resolve("react-refresh/babel")],
+              plugins: [require.resolve("react-refresh/babel"), '@babel/plugin-transform-react-jsx'],
             },
-          },
-          {
-            loader: '@mdx-js/loader',
-            /** @type {import('@mdx-js/loader').Options} */
-            options: {},
           },
         ],
       },
